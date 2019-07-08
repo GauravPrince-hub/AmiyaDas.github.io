@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar.mat-primary {\r\n    background: #fff;\r\n    color: #111;\r\n    font-weight: bold;\r\n    box-shadow: 1px 1px 10px 1px #aaa;\r\n    z-index: 10;\r\n    position: fixed;\r\n}\r\n\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 3rem;\r\n}"
+module.exports = ".mat-toolbar.mat-primary {\r\n    background: #fff;\r\n    color: #111;\r\n    font-weight: bold;\r\n    box-shadow: 1px 1px 10px 1px #aaa;\r\n    z-index: 10;\r\n    position: fixed;\r\n}\r\n\r\n.mat-toolbar-row, .mat-toolbar-single-row {\r\n    height: 3rem;\r\n}\r\n\r\n.home-page{\r\n    width: 100%;\r\n    /* position: fixed; */\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ".mat-toolbar.mat-primary {\r\n    background: #fff;\r\n    col
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-toolbar color=\"primary\" role=\"heading\">\n  <span>\n    Device Dashboard\n  </span>\n  <span class=\"example-fill-remaining-space\"></span>\n  <span>\n    <button mat-icon-button>\n      <mat-icon>notifications_none</mat-icon>\n    </button>\n    <button mat-icon-button>\n      <mat-icon>settings</mat-icon>\n    </button>\n  </span>\n</mat-toolbar>\n\n<app-home></app-home>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mat-toolbar color=\"primary\" role=\"heading\">\n  <span>\n    Device Dashboard\n  </span>\n  <span class=\"example-fill-remaining-space\"></span>\n  <span>\n    <button mat-icon-button>\n      <mat-icon>notifications_none</mat-icon>\n    </button>\n    <button mat-icon-button>\n      <mat-icon>settings</mat-icon>\n    </button>\n  </span>\n</mat-toolbar>\n<app-home class=\"home-page\"></app-home>"
 
 /***/ }),
 
@@ -229,7 +229,7 @@ module.exports = ".device-table {\r\n    box-shadow: 1px 1px 10px 1px #aaa;\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"device-table\">\n  <div class=\"device-table-header\">\n    Device List\n    <span class=\"device-table-header-icon\">\n      <mat-icon>more_horiz</mat-icon>\n    </span>\n    <!-- No. User name User role Location Status Device Version no. Battery  -->\n  </div>\n  <table class=\"table table-striped\">\n    <thead>\n      <tr>\n        <th scope=\"col\">No.</th>\n        <th scope=\"col\">User name</th>\n        <th scope=\"col\">User role</th>\n        <th scope=\"col\">Location</th>\n        <th scope=\"col\">Status</th>\n        <th scope=\"col\">Device</th>\n        <th scope=\"col\">Version no.</th>\n        <th scope=\"col\">Battery</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <th scope=\"row\">1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">2</th>\n        <td>Jacob</td>\n        <td>Thornton</td>\n        <td>fat</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">3</th>\n        <td>Larry</td>\n        <td>the Bird</td>\n        <td>twitter</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+module.exports = "<div class=\"device-table\">\n  <div class=\"device-table-header\">\n    Device List\n    <span class=\"device-table-header-icon\">\n      <mat-icon>more_horiz</mat-icon>\n    </span>\n  </div>\n  <div class=\"table-responsive\">\n  <table class=\"table table-striped\">\n    <thead>\n      <tr>\n        <th scope=\"col\">No.</th>\n        <th scope=\"col\">User name</th>\n        <th scope=\"col\">User role</th>\n        <th scope=\"col\">Location</th>\n        <th scope=\"col\">Status</th>\n        <th scope=\"col\">Device</th>\n        <th scope=\"col\">Version no.</th>\n        <th scope=\"col\">Battery</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <th scope=\"row\">1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">2</th>\n        <td>Jacob</td>\n        <td>Thornton</td>\n        <td>fat</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">3</th>\n        <td>Larry</td>\n        <td>the Bird</td>\n        <td>twitter</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</div>"
 
 /***/ }),
 
@@ -292,7 +292,7 @@ module.exports = ".example-fill-remaining-space {\r\n    /* This fills the remai
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-padding\">\n  <div>\n    <span class=\"title-text\">Real-time Overview</span>\n    <span class=\"dropdown\">\n        <button [matMenuTriggerFor]=\"menu\" class=\"btn dropdown-toggle dropdown-button-wrapper\">Export\n        </button>\n        <mat-menu #menu=\"matMenu\">\n          <button mat-menu-item>Item 1</button>\n          <button mat-menu-item>Item 2</button>\n        </mat-menu>\n      </span>\n  </div>\n\n  <div class=\"row card-block\">\n    <app-dashboard-card cardTitle=\"Active Devices\" class=\"col-md-4 col-sm-12 col-xs-12\">text to insert</app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Roles\" class=\"col-md-4 col-sm-12 col-xs-12\">\n      <div>\n        text\n      </div>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Sample Board\" class=\"col-md-4 col-sm-12 col-xs-12\"></app-dashboard-card>\n\n  </div>\n\n  <app-device-table>\n\n  </app-device-table>\n</div>"
+module.exports = "<div class=\"home-padding\">\n  <div>\n    <span class=\"title-text\">Real-time Overview</span>\n    <span class=\"dropdown\">\n      <button [matMenuTriggerFor]=\"menu\" class=\"btn dropdown-toggle dropdown-button-wrapper\">Export\n      </button>\n      <mat-menu #menu=\"matMenu\">\n        <button mat-menu-item>Item 1</button>\n        <button mat-menu-item>Item 2</button>\n      </mat-menu>\n    </span>\n  </div>\n\n  <div class=\"row card-block\">\n    <app-dashboard-card cardTitle=\"Active Devices\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\">text to insert\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Roles\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\">\n      <div>\n        text\n      </div>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Sample Board\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\"></app-dashboard-card>\n  </div>\n\n  <app-device-table></app-device-table>\n</div>"
 
 /***/ }),
 
