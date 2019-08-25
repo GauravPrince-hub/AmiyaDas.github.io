@@ -100,12 +100,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_dashboard_card_dashboard_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dashboard-card/dashboard-card.component */ "./src/app/components/dashboard-card/dashboard-card.component.ts");
 /* harmony import */ var _components_device_table_device_table_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/device-table/device-table.component */ "./src/app/components/device-table/device-table.component.ts");
 /* harmony import */ var _components_dashboard_chart_dashboard_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/dashboard-chart/dashboard-chart.component */ "./src/app/components/dashboard-chart/dashboard-chart.component.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _shared_count_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./shared/count.pipe */ "./src/app/shared/count.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -125,9 +135,12 @@ var AppModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
                 _components_dashboard_card_dashboard_card_component__WEBPACK_IMPORTED_MODULE_6__["DashboardCardComponent"],
                 _components_device_table_device_table_component__WEBPACK_IMPORTED_MODULE_7__["DeviceTableComponent"],
-                _components_dashboard_chart_dashboard_chart_component__WEBPACK_IMPORTED_MODULE_8__["DashboardChartComponent"]
+                _components_dashboard_chart_dashboard_chart_component__WEBPACK_IMPORTED_MODULE_8__["DashboardChartComponent"],
+                _shared_count_pipe__WEBPACK_IMPORTED_MODULE_12__["CountPipe"]
             ],
             imports: [
+                angularfire2__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(src_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].firebase),
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_10__["AngularFireDatabaseModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
@@ -340,7 +353,7 @@ module.exports = ".device-table {\r\n    box-shadow: 1px 1px 10px 1px #aaa;\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"device-table\">\n  <div class=\"device-table-header\">\n    Device List\n    <span class=\"device-table-header-icon\">\n      <mat-icon [matMenuTriggerFor]=\"tableMenu\">more_horiz</mat-icon>\n    </span>\n    <mat-menu #tableMenu=\"matMenu\">\n      <button mat-menu-item>Item 1</button>\n      <button mat-menu-item>Item 2</button>\n    </mat-menu>\n  </div>\n  <div class=\"table-responsive\">\n  <table class=\"table table-striped\">\n    <thead>\n      <tr>\n        <th scope=\"col\">No.</th>\n        <th scope=\"col\">User name</th>\n        <th scope=\"col\">User role</th>\n        <th scope=\"col\">Location</th>\n        <th scope=\"col\">Status</th>\n        <th scope=\"col\">Device</th>\n        <th scope=\"col\">Version no.</th>\n        <th scope=\"col\">Battery</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <th scope=\"row\">1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">2</th>\n        <td>Jacob</td>\n        <td>Thornton</td>\n        <td>fat</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n      <tr>\n        <th scope=\"row\">3</th>\n        <td>Larry</td>\n        <td>the Bird</td>\n        <td>twitter</td>\n        <th>1</th>\n        <td>Mark</td>\n        <td>Otto</td>\n        <td>mdo</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n</div>"
+module.exports = "<div class=\"device-table\">\n  <div class=\"device-table-header\">\n    Device List\n    <span class=\"device-table-header-icon\">\n      <mat-icon [matMenuTriggerFor]=\"tableMenu\">more_horiz</mat-icon>\n    </span>\n    <mat-menu #tableMenu=\"matMenu\">\n      <button mat-menu-item>Item 1</button>\n      <button mat-menu-item>Item 2</button>\n    </mat-menu>\n  </div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th scope=\"col\">No.</th>\n          <th scope=\"col\">User name</th>\n          <th scope=\"col\">User role</th>\n          <th scope=\"col\">Location</th>\n          <th scope=\"col\">Status</th>\n          <th scope=\"col\">Device</th>\n          <th scope=\"col\">Version no.</th>\n          <th scope=\"col\">Battery</th>\n        </tr>\n      </thead>\n      <tbody *ngIf=\"tableData && tableData.length>0\">\n        <tr *ngFor=\"let user of tableData;let i=index\">\n          <th scope=\"row\">{{i+1}}</th>\n          <td>{{user.userName}}</td>\n          <td>{{user.userRole}}</td>\n          <td>{{user.location}}</td>\n          <th>{{user.status}}</th>\n          <td>{{user.deviceName}}</td>\n          <td>{{user.version}}</td>\n          <td>{{user.battery}}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -367,9 +380,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var DeviceTableComponent = /** @class */ (function () {
     function DeviceTableComponent() {
+        this.tableData = [];
     }
     DeviceTableComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], DeviceTableComponent.prototype, "tableData", void 0);
     DeviceTableComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-device-table',
@@ -403,7 +421,7 @@ module.exports = ".example-fill-remaining-space {\r\n    /* This fills the remai
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-padding\">\n  <div>\n    <span class=\"title-text\">Real-time Overview</span>\n    <span class=\"dropdown\">\n      <button [matMenuTriggerFor]=\"menu\" class=\"btn dropdown-toggle dropdown-button-wrapper\">Export\n      </button>\n      <mat-menu #menu=\"matMenu\">\n        <button mat-menu-item>Item 1</button>\n        <button mat-menu-item>Item 2</button>\n      </mat-menu>\n    </span>\n  </div>\n\n  <div class=\"row card-block\">\n    <app-dashboard-card cardTitle=\"Active Devices\" class=\"col-md-4 col-sm-12 col-xs-12 col-12 card-alignmnet\">\n      <div class=\"row\">\n        <div class=\"col-12 active-device-count\">\n          15\n        </div>\n      </div>\n      <div class=\"row active-device-type\">\n        <div class=\"col-6\">\n          <div class=\"device-title\">\n            <mat-icon>phone_android</mat-icon>\n            Android\n          </div>\n          <div class=\"device-data\">\n            12 (60%)\n          </div>\n        </div>\n        <div class=\"col-6\">\n          <div class=\"device-title\">\n            <mat-icon>phone_android</mat-icon>\n            iOS\n          </div>\n          <div class=\"device-data\">\n            8 (40%)\n          </div>\n        </div>\n      </div>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Roles\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\">\n      <app-dashboard-chart></app-dashboard-chart>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Sample Board\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\"></app-dashboard-card>\n  </div>\n\n  <app-device-table></app-device-table>\n</div>"
+module.exports = "<div class=\"home-padding\">\n  <div>\n    <span class=\"title-text\">Real-time Overview</span>\n    <span class=\"dropdown\">\n      <button [matMenuTriggerFor]=\"menu\" class=\"btn dropdown-toggle dropdown-button-wrapper\">Export\n      </button>\n      <mat-menu #menu=\"matMenu\">\n        <button mat-menu-item>Item 1</button>\n        <button mat-menu-item>Item 2</button>\n      </mat-menu>\n    </span>\n  </div>\n\n  <div class=\"row card-block\">\n    <app-dashboard-card cardTitle=\"Active Devices\" class=\"col-md-4 col-sm-12 col-xs-12 col-12 card-alignmnet\">\n      <div class=\"row\">\n        <div class=\"col-12 active-device-count\">\n          {{usersData.length}}\n        </div>\n      </div>\n      <div class=\"row active-device-type\">\n        <div class=\"col-6\">\n          <div class=\"device-title\">\n            <mat-icon>phone_android</mat-icon>\n            Android\n          </div>\n          <div class=\"device-data\">\n            {{usersData|count:'deviceType':'Android'}}\n            ({{(usersData|count:'deviceType':'Android')*100/usersData.length}}%)\n          </div>\n        </div>\n        <div class=\"col-6\">\n          <div class=\"device-title\">\n            <mat-icon>phone_android</mat-icon>\n            iOS\n          </div>\n          <div class=\"device-data\">\n            {{usersData|count:'deviceType':'IOS'}}\n            ({{(usersData|count:'deviceType':'IOS')*100/usersData.length}}%)\n          </div>\n        </div>\n      </div>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Roles\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\">\n      <app-dashboard-chart></app-dashboard-chart>\n    </app-dashboard-card>\n    <app-dashboard-card cardTitle=\"Sample Board\" class=\"col-md-4 col-sm-12 col-xs-12 col-12\"></app-dashboard-card>\n  </div>\n\n  <app-device-table [tableData]=\"usersData\"></app-device-table>\n</div>"
 
 /***/ }),
 
@@ -418,6 +436,8 @@ module.exports = "<div class=\"home-padding\">\n  <div>\n    <span class=\"title
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_1__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -428,10 +448,40 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(db) {
+        var _this = this;
+        this.usersData = null;
+        db.list('/users').valueChanges().subscribe(function (data) {
+            _this.parseDataForTable(data);
+            // this.usersData = data;
+        }, function (error) {
+            console.log(error);
+        });
     }
     HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent.prototype.parseDataForTable = function (data) {
+        var users = [];
+        data.forEach(function (user) {
+            if (user.devices) {
+                for (var device in user.devices) {
+                    var tempUser = {
+                        "userName": user.userName,
+                        "userRole": user.userRole,
+                        "battery": user.devices[device].battery,
+                        "deviceName": user.devices[device].deviceName,
+                        "location": user.devices[device].location,
+                        "status": user.devices[device].status,
+                        "version": user.devices[device].version,
+                        "deviceType": user.devices[device].deviceType
+                    };
+                    users.push(tempUser);
+                }
+            }
+        });
+        this.usersData = users;
     };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -439,9 +489,51 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/count.pipe.ts":
+/*!**************************************!*\
+  !*** ./src/app/shared/count.pipe.ts ***!
+  \**************************************/
+/*! exports provided: CountPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountPipe", function() { return CountPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var CountPipe = /** @class */ (function () {
+    function CountPipe() {
+    }
+    CountPipe.prototype.transform = function (items, key, value) {
+        var count = 0;
+        items.forEach(function (element) {
+            if (element[key] === value) {
+                count++;
+            }
+        });
+        return count;
+    };
+    CountPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'count'
+        })
+    ], CountPipe);
+    return CountPipe;
 }());
 
 
@@ -462,7 +554,16 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyApHf7YWMy0z-H_Ob6sHkiot1bS6zb1aPU",
+        authDomain: "device-manager-c88d3.firebaseapp.com",
+        databaseURL: "https://device-manager-c88d3.firebaseio.com",
+        projectId: "device-manager-c88d3",
+        storageBucket: "",
+        messagingSenderId: "296691118933",
+        appId: "1:296691118933:web:9a3baa55199e474b"
+    }
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
