@@ -41,7 +41,7 @@ body {
 .matchBox {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 8px grey;
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 0.5rem;
   padding: 1rem;
 }
 .matchDate {
@@ -119,4 +119,17 @@ body {
   text-align: left;
   background-color: #223577;
   color: white;
+}
+
+@media only screen and (min-width: 700px) {
+  .matchBox {
+    width: 41%;
+    float: left;
+  }
+
+  #MatchSec:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
