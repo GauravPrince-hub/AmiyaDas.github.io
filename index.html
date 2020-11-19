@@ -1,14 +1,424 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>ProjectTask</title>
-  <base href="/test">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Chess Tournamnet</title>
+  <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root></app-root>
-<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+  <script>
+    var data = [{
+      "matchNo": "1",
+      "date": "11/21/20",
+      "p1": "ARUN",
+      "p2": "AMIYA",
+      "winner": ""
+    },
+    {
+      "matchNo": "2",
+      "date": "11/21/20",
+      "p1": "RAHUL",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "3",
+      "date": "11/21/20",
+      "p1": "PRINCE",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "4",
+      "date": "11/22/20",
+      "p1": "ARUN",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "5",
+      "date": "11/22/20",
+      "p1": "AMIYA",
+      "p2": "RAHUL",
+      "winner": ""
+    },
+    {
+      "matchNo": "6",
+      "date": "11/22/20",
+      "p1": "NITISH",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "7",
+      "date": "11/23/20",
+      "p1": "RAHUL",
+      "p2": "ARUN",
+      "winner": ""
+    },
+    {
+      "matchNo": "8",
+      "date": "11/23/20",
+      "p1": "AMIYA",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "9",
+      "date": "11/23/20",
+      "p1": "PAWAN",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "10",
+      "date": "11/24/20",
+      "p1": "ARUN",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "11",
+      "date": "11/24/20",
+      "p1": "AMIYA",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "12",
+      "date": "11/24/20",
+      "p1": "RAHUL",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "13",
+      "date": "11/25/20",
+      "p1": "NITISH",
+      "p2": "AMIYA",
+      "winner": ""
+    },
+    {
+      "matchNo": "14",
+      "date": "11/25/20",
+      "p1": "PRINCE",
+      "p2": "ARUN",
+      "winner": ""
+    },
+    {
+      "matchNo": "15",
+      "date": "11/25/20",
+      "p1": "PAWAN",
+      "p2": "RAHUL",
+      "winner": ""
+    },
+    {
+      "matchNo": "16",
+      "date": "11/26/20",
+      "p1": "ARUN",
+      "p2": "AMIYA",
+      "winner": ""
+    },
+    {
+      "matchNo": "17",
+      "date": "11/26/20",
+      "p1": "RAHUL",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "18",
+      "date": "11/26/20",
+      "p1": "PRINCE",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "19",
+      "date": "11/27/20",
+      "p1": "ARUN",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "20",
+      "date": "11/27/20",
+      "p1": "AMIYA",
+      "p2": "RAHUL",
+      "winner": ""
+    },
+    {
+      "matchNo": "21",
+      "date": "11/27/20",
+      "p1": "NITISH",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "22",
+      "date": "11/28/20",
+      "p1": "RAHUL",
+      "p2": "ARUN",
+      "winner": ""
+    },
+    {
+      "matchNo": "23",
+      "date": "11/28/20",
+      "p1": "AMIYA",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "24",
+      "date": "11/28/20",
+      "p1": "PAWAN",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "25",
+      "date": "11/29/20",
+      "p1": "ARUN",
+      "p2": "NITISH",
+      "winner": ""
+    },
+    {
+      "matchNo": "26",
+      "date": "11/29/20",
+      "p1": "AMIYA",
+      "p2": "PAWAN",
+      "winner": ""
+    },
+    {
+      "matchNo": "27",
+      "date": "11/29/20",
+      "p1": "RAHUL",
+      "p2": "PRINCE",
+      "winner": ""
+    },
+    {
+      "matchNo": "28",
+      "date": "11/30/20",
+      "p1": "NITISH",
+      "p2": "AMIYA",
+      "winner": ""
+    },
+    {
+      "matchNo": "29",
+      "date": "11/30/20",
+      "p1": "PRINCE",
+      "p2": "ARUN",
+      "winner": ""
+    },
+    {
+      "matchNo": "30",
+      "date": "11/30/20",
+      "p1": "PAWAN",
+      "p2": "RAHUL",
+      "winner": ""
+    },
+    {
+      "matchNo": "31",
+      "date": "12/1/20",
+      "p1": "Position 1",
+      "p2": "Position 4",
+      "winner": ""
+    },
+    {
+      "matchNo": "32",
+      "date": "12/1/20",
+      "p1": "Position 2",
+      "p2": "Position 3",
+      "winner": ""
+    },
+    {
+      "matchNo": "33",
+      "date": "12/2/20",
+      "p1": "Winner of Match  32",
+      "p2": "Loser of Match 31",
+      "winner": ""
+    },
+    {
+      "matchNo": "34",
+      "date": "12/2/20",
+      "p1": "Winner of Match  31",
+      "p2": "Winner of Match 33",
+      "winner": ""
+    }
+      /*{
+            "matchNo": 1,
+            "date": "21/11/2020",
+            "p1": "NITISH",
+            "p2": "PAWAN",
+            "winner": ""
+          }, {
+            "matchNo": 1,
+            "date": "21/11/2020",
+            "p1": "RAHUL",
+            "p2": "PRINCE",
+            "winner": ""
+          }, {
+            "matchNo": 1,
+            "date": "21/11/2020",
+            "p1": "ARUN",
+            "p2": "PRINCE",
+            "winner": ""
+          }, {
+            "matchNo": 1,
+            "date": "21/11/2020",
+            "p1": "AMIYA",
+            "p2": "NITISH",
+            "winner": ""
+          }, {
+            "matchNo": 1,
+            "date": "21/11/2020",
+            "p1": "PAWAN",
+            "p2": "PRINCE",
+            "winner": ""
+          }*/
+    ]
+  </script>
+  <div class="mainSection">
+    <div class="header">
+      <div id="Match" class="tabcontent">
+        <h1>Chess Tournamnet</h1>
+        <p>11 Nov 2020 - 2 Dec 2020</p>
+      </div>
+
+      <div id="Point" class="tabcontent">
+        <h1>Chess Tournamnet</h1>
+        <p>11 Nov 2020 - 2 Dec 2020</p>
+      </div>
+      <button class="tablink" onclick="openCity('Match', this)" id="defaultOpen">Matches</button>
+      <button class="tablink" onclick="openCity('Point', this)">Points Table</button>
+    </div>
+
+
+    <div class="bodySection">
+      <div class="tabSection" id="MatchSec">
+        <!-- <div class="matchBox">
+          <div class="matchDate">21/11/2020</div>
+          <div class="matchTitle">
+            <div class="p1">AMIYA</div>
+            <div class="p2">GAURAV</div>
+          </div>
+          <div class="matchWinner">WINNER: amiya</div>
+        </div> -->
+      </div>
+      <div class="tabSection" id="PointSec">
+        <table id="pointsTable">
+          <tr>
+            <th>Player</th>
+            <th>Played</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Points</th>
+          </tr>
+          <tr>
+            <td>AMIYA</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>ARUN</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>NITISH</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>PAWAN</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>PRINCE</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>RAHUL</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCity(cityName, elmnt) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = "#223577";
+      tabSec = document.getElementsByClassName("tabSection");
+      for (i = 0; i < tabSec.length; i++) {
+        tabSec[i].style.display = "none";
+      }
+      document.getElementById(cityName + "Sec").style.display = "block";
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    var bodySec = document.getElementById("MatchSec");
+    data.forEach(match => {
+      var matchBox = document.createElement("div");
+      matchBox.classList = "matchBox";
+
+      var matchDate = document.createElement("div");
+      matchDate.classList = "matchDate";
+      matchDate.innerHTML = "MATCH " + match.matchNo + "  -  " + match.date;
+
+      var matchTitle = document.createElement("div");
+      matchTitle.classList = "matchTitle";
+      var p1 = document.createElement("div");
+      p1.classList = match.p1;
+      p1.innerHTML = match.p1;
+      var p2 = document.createElement("div");
+      p2.classList = match.p2;
+      p2.innerHTML = match.p2;
+      matchTitle.appendChild(p1);
+      matchTitle.appendChild(p2);
+
+      var matchWinner = document.createElement("div");
+      matchWinner.classList = "matchWinner";
+      matchWinner.innerHTML = "WINNER : ?";
+
+      matchBox.appendChild(matchDate);
+      matchBox.appendChild(matchTitle);
+      matchBox.appendChild(matchWinner);
+
+      bodySec.appendChild(matchBox);
+    });
+
+  </script>
+</body>
+
 </html>

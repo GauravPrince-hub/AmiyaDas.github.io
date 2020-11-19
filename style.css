@@ -1,0 +1,123 @@
+body {
+  margin: 0px;
+  height: 100%;
+  font-family: "arial", "sans-serif", "Courier New", Courier, monospace;
+}
+
+.header {
+  /* height: 6rem;
+  background-color: #223577;
+  color: #fff; */
+}
+
+.tabSection {
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  background-color: #223577;
+  padding: 50px;
+  text-align: center;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+/* end tabs */
+
+.matchBox {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 8px grey;
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
+}
+.matchDate {
+  color: #777;
+  font-size: 14px;
+}
+.bodySection {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.matchWinner {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+.matchTitle {
+  text-align: center;
+  display: flex;
+  padding: 0.25rem;
+}
+
+.matchTitle div {
+  width: 50%;
+}
+
+.AMIYA {
+  background-color: aquamarine;
+}
+
+.PRINCE {
+  background-color: coral;
+}
+
+.ARUN {
+  background-color: goldenrod;
+}
+
+.NITISH {
+  background-color: orchid;
+}
+.RAHUL {
+  background-color: lightgreen;
+}
+.PAWAN {
+  background-color: cornflowerblue;
+}
+
+#pointsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pointsTable td,
+#pointsTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#pointsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#pointsTable tr:hover {
+  background-color: #ddd;
+}
+
+#pointsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #223577;
+  color: white;
+}
