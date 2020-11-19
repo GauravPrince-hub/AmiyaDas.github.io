@@ -5,9 +5,8 @@ body {
 }
 
 .header {
-  /* height: 6rem;
-  background-color: #223577;
-  color: #fff; */
+  width: 100%;
+  position: fixed;
 }
 
 .tabSection {
@@ -18,7 +17,7 @@ body {
   color: white;
   display: none;
   background-color: #223577;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -50,7 +49,7 @@ body {
   font-size: 14px;
 }
 .bodySection {
-  margin-top: 4rem;
+  padding-top: 15rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
