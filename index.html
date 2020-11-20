@@ -11,287 +11,341 @@
 
 <body>
   <script>
-    var data = [{
-      "matchNo": "1",
-      "date": "11/21/20",
-      "p1": "ARUN",
-      "p2": "AMIYA",
-      "winner": ""
-    },
-    {
-      "matchNo": "2",
-      "date": "11/21/20",
-      "p1": "RAHUL",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "3",
-      "date": "11/21/20",
-      "p1": "PRINCE",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "4",
-      "date": "11/22/20",
-      "p1": "ARUN",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "5",
-      "date": "11/22/20",
-      "p1": "AMIYA",
-      "p2": "RAHUL",
-      "winner": ""
-    },
-    {
-      "matchNo": "6",
-      "date": "11/22/20",
-      "p1": "NITISH",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "7",
-      "date": "11/23/20",
-      "p1": "RAHUL",
-      "p2": "ARUN",
-      "winner": ""
-    },
-    {
-      "matchNo": "8",
-      "date": "11/23/20",
-      "p1": "AMIYA",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "9",
-      "date": "11/23/20",
-      "p1": "PAWAN",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "10",
-      "date": "11/24/20",
-      "p1": "ARUN",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "11",
-      "date": "11/24/20",
-      "p1": "AMIYA",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "12",
-      "date": "11/24/20",
-      "p1": "RAHUL",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "13",
-      "date": "11/25/20",
-      "p1": "NITISH",
-      "p2": "AMIYA",
-      "winner": ""
-    },
-    {
-      "matchNo": "14",
-      "date": "11/25/20",
-      "p1": "PRINCE",
-      "p2": "ARUN",
-      "winner": ""
-    },
-    {
-      "matchNo": "15",
-      "date": "11/25/20",
-      "p1": "PAWAN",
-      "p2": "RAHUL",
-      "winner": ""
-    },
-    {
-      "matchNo": "16",
-      "date": "11/26/20",
-      "p1": "ARUN",
-      "p2": "AMIYA",
-      "winner": ""
-    },
-    {
-      "matchNo": "17",
-      "date": "11/26/20",
-      "p1": "RAHUL",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "18",
-      "date": "11/26/20",
-      "p1": "PRINCE",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "19",
-      "date": "11/27/20",
-      "p1": "ARUN",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "20",
-      "date": "11/27/20",
-      "p1": "AMIYA",
-      "p2": "RAHUL",
-      "winner": ""
-    },
-    {
-      "matchNo": "21",
-      "date": "11/27/20",
-      "p1": "NITISH",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "22",
-      "date": "11/28/20",
-      "p1": "RAHUL",
-      "p2": "ARUN",
-      "winner": ""
-    },
-    {
-      "matchNo": "23",
-      "date": "11/28/20",
-      "p1": "AMIYA",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "24",
-      "date": "11/28/20",
-      "p1": "PAWAN",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "25",
-      "date": "11/29/20",
-      "p1": "ARUN",
-      "p2": "NITISH",
-      "winner": ""
-    },
-    {
-      "matchNo": "26",
-      "date": "11/29/20",
-      "p1": "AMIYA",
-      "p2": "PAWAN",
-      "winner": ""
-    },
-    {
-      "matchNo": "27",
-      "date": "11/29/20",
-      "p1": "RAHUL",
-      "p2": "PRINCE",
-      "winner": ""
-    },
-    {
-      "matchNo": "28",
-      "date": "11/30/20",
-      "p1": "NITISH",
-      "p2": "AMIYA",
-      "winner": ""
-    },
-    {
-      "matchNo": "29",
-      "date": "11/30/20",
-      "p1": "PRINCE",
-      "p2": "ARUN",
-      "winner": ""
-    },
-    {
-      "matchNo": "30",
-      "date": "11/30/20",
-      "p1": "PAWAN",
-      "p2": "RAHUL",
-      "winner": ""
-    },
-    {
-      "matchNo": "31",
-      "date": "12/1/20",
-      "p1": "Position 1",
-      "p2": "Position 4",
-      "winner": ""
-    },
-    {
-      "matchNo": "32",
-      "date": "12/1/20",
-      "p1": "Position 2",
-      "p2": "Position 3",
-      "winner": ""
-    },
-    {
-      "matchNo": "33",
-      "date": "12/2/20",
-      "p1": "Winner of Match  32",
-      "p2": "Loser of Match 31",
-      "winner": ""
-    },
-    {
-      "matchNo": "34",
-      "date": "12/2/20",
-      "p1": "Winner of Match  31",
-      "p2": "Winner of Match 33",
-      "winner": ""
-    }
-      /*{
-            "matchNo": 1,
-            "date": "21/11/2020",
-            "p1": "NITISH",
-            "p2": "PAWAN",
-            "winner": ""
-          }, {
-            "matchNo": 1,
-            "date": "21/11/2020",
-            "p1": "RAHUL",
-            "p2": "PRINCE",
-            "winner": ""
-          }, {
-            "matchNo": 1,
-            "date": "21/11/2020",
-            "p1": "ARUN",
-            "p2": "PRINCE",
-            "winner": ""
-          }, {
-            "matchNo": 1,
-            "date": "21/11/2020",
-            "p1": "AMIYA",
-            "p2": "NITISH",
-            "winner": ""
-          }, {
-            "matchNo": 1,
-            "date": "21/11/2020",
-            "p1": "PAWAN",
-            "p2": "PRINCE",
-            "winner": ""
-          }*/
-    ]
+    var data = [
+      {
+        "matchNo.": "MATCH 1",
+        "date": "11/21/20",
+        "p1": "ARUN",
+        "p2": "AMIYA",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 2",
+        "date": "11/21/20",
+        "p1": "RAHUL",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 3",
+        "date": "11/21/20",
+        "p1": "PRINCE",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 4",
+        "date": "11/21/20",
+        "p1": "AMIYA",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 5",
+        "date": "11/22/20",
+        "p1": "ARUN",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 6",
+        "date": "11/22/20",
+        "p1": "AMIYA",
+        "p2": "RAHUL",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 7",
+        "date": "11/22/20",
+        "p1": "NITISH",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 8",
+        "date": "11/22/20",
+        "p1": "ARUN",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 9",
+        "date": "11/22/20",
+        "p1": "PAWAN",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 10",
+        "date": "11/23/20",
+        "p1": "RAHUL",
+        "p2": "ARUN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 11",
+        "date": "11/23/20",
+        "p1": "AMIYA",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 12",
+        "date": "11/23/20",
+        "p1": "PAWAN",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 13",
+        "date": "11/23/20",
+        "p1": "RAHUL",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 14",
+        "date": "11/24/20",
+        "p1": "ARUN",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 15",
+        "date": "11/24/20",
+        "p1": "AMIYA",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 16",
+        "date": "11/24/20",
+        "p1": "RAHUL",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 17",
+        "date": "11/24/20",
+        "p1": "PRINCE",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 18",
+        "date": "11/25/20",
+        "p1": "NITISH",
+        "p2": "AMIYA",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 19",
+        "date": "11/25/20",
+        "p1": "PRINCE",
+        "p2": "ARUN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 20",
+        "date": "11/25/20",
+        "p1": "PAWAN",
+        "p2": "RAHUL",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 21",
+        "date": "11/25/20",
+        "p1": "NITISH",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 22",
+        "date": "11/26/20",
+        "p1": "ARUN",
+        "p2": "AMIYA",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 23",
+        "date": "11/26/20",
+        "p1": "RAHUL",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 24",
+        "date": "11/26/20",
+        "p1": "PRINCE",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 25",
+        "date": "11/26/20",
+        "p1": "PAWAN",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 26",
+        "date": "11/27/20",
+        "p1": "ARUN",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 27",
+        "date": "11/27/20",
+        "p1": "AMIYA",
+        "p2": "RAHUL",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 28",
+        "date": "11/27/20",
+        "p1": "NITISH",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 29",
+        "date": "11/27/20",
+        "p1": "AMIYA",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 30",
+        "date": "11/28/20",
+        "p1": "RAHUL",
+        "p2": "ARUN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 31",
+        "date": "11/28/20",
+        "p1": "AMIYA",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 32",
+        "date": "11/28/20",
+        "p1": "PAWAN",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 33",
+        "date": "11/28/20",
+        "p1": "ARUN",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 34",
+        "date": "11/29/20",
+        "p1": "ARUN",
+        "p2": "NITISH",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 35",
+        "date": "11/29/20",
+        "p1": "AMIYA",
+        "p2": "PAWAN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 36",
+        "date": "11/29/20",
+        "p1": "RAHUL",
+        "p2": "PRINCE",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 37",
+        "date": "11/29/20",
+        "p1": "RAHUL",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 38",
+        "date": "11/29/20",
+        "p1": "PRINCE",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 39",
+        "date": "11/30/20",
+        "p1": "NITISH",
+        "p2": "AMIYA",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 40",
+        "date": "11/30/20",
+        "p1": "PRINCE",
+        "p2": "ARUN",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 41",
+        "date": "11/30/20",
+        "p1": "PAWAN",
+        "p2": "RAHUL",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 42",
+        "date": "11/30/20",
+        "p1": "NITISH",
+        "p2": "ASHOK",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 43",
+        "date": "12/1/20",
+        "p1": "Position 1",
+        "p2": "Position 2",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 44",
+        "date": "12/1/20",
+        "p1": "Position 3",
+        "p2": "Position 4",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 45",
+        "date": "12/2/20",
+        "p1": "Winner of Match  44",
+        "p2": "Loser of Match 43",
+        "winner": ""
+      },
+      {
+        "matchNo.": "MATCH 46",
+        "date": "12/2/20",
+        "p1": "Winner of Match  43",
+        "p2": "Winner of Match 46",
+        "winner": ""
+      }
+    ];
   </script>
   <div class="mainSection">
     <div class="header">
       <div id="Match" class="tabcontent">
         <h1>Chess Tournamnet</h1>
-        <p>11 Nov 2020 - 2 Dec 2020</p>
+        <p>21 Nov 2020 - 2 Dec 2020</p>
       </div>
 
       <div id="Point" class="tabcontent">
         <h1>Chess Tournamnet</h1>
-        <p>11 Nov 2020 - 2 Dec 2020</p>
+        <p>21 Nov 2020 - 2 Dec 2020</p>
       </div>
       <button class="tablink" onclick="openCity('Match', this)" id="defaultOpen">Matches</button>
       <button class="tablink" onclick="openCity('Point', this)">Points Table</button>
@@ -386,7 +440,7 @@
 
       var matchDate = document.createElement("div");
       matchDate.classList = "matchDate";
-      matchDate.innerHTML = "MATCH " + match.matchNo + "  -  " + match.date;
+      matchDate.innerHTML = match.matchNo + "  -  " + match.date;
 
       var matchTitle = document.createElement("div");
       matchTitle.classList = "matchTitle";
@@ -401,7 +455,13 @@
 
       var matchWinner = document.createElement("div");
       matchWinner.classList = "matchWinner";
-      matchWinner.innerHTML = "WINNER : ?";
+      if (match.winner && match.winner != "") {
+        matchWinner.innerHTML = "WINNER : " + match.winner;
+        matchWinner.className = matchWinner.className + " " + match.winner;
+      }
+      else {
+        matchWinner.innerHTML = "WINNER : ?";
+      }
 
       matchBox.appendChild(matchDate);
       matchBox.appendChild(matchTitle);

@@ -59,12 +59,14 @@ body {
   font-size: large;
   text-align: center;
   padding: 0.25rem;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .matchTitle {
   text-align: center;
   display: flex;
-  padding: 0.25rem;
+  padding: 0.25rem 0.25rem 0rem 0.25rem;
 }
 
 .matchTitle div {
@@ -76,11 +78,11 @@ body {
 }
 
 .PRINCE {
-  background-color: coral;
+  background-color: lightsalmon;
 }
 
 .ARUN {
-  background-color: goldenrod;
+  background-color: rgb(243, 243, 136);
 }
 
 .NITISH {
@@ -91,6 +93,9 @@ body {
 }
 .PAWAN {
   background-color: cornflowerblue;
+}
+.ASHOK {
+  background-color: rgb(253, 140, 165);
 }
 
 #pointsTable {
