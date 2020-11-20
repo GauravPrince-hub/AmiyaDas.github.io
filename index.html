@@ -335,6 +335,52 @@
         "winner": ""
       }
     ];
+
+    var tableData = [
+      {
+        "name": "AMIYA",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "ARUN",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "ASHOK",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "NITISH",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "PAWAN",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "PRINCE",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }, {
+        "name": "RAHUL",
+        "played": 0,
+        "won": 0,
+        "lost": 0,
+        "points": 0
+      }
+    ];
   </script>
   <div class="mainSection">
     <div class="header">
@@ -363,48 +409,6 @@
             <th>Won</th>
             <th>Lost</th>
             <th>Points</th>
-          </tr>
-          <tr>
-            <td>AMIYA</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>ARUN</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>NITISH</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>PAWAN</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>PRINCE</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>RAHUL</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
           </tr>
         </table>
       </div>
@@ -468,8 +472,34 @@
       matchBox.appendChild(matchWinner);
 
       bodySec.appendChild(matchBox);
+
+
     });
 
+    //code for points table
+    tableData.sort(function (a, b) {
+      return b.points - a.points;
+    });
+    var pointsTable = document.getElementById("pointsTable");
+    tableData.forEach(player => {
+      var tableRow = document.createElement("tr");
+      var col1 = document.createElement("td");
+      var col2 = document.createElement("td");
+      var col3 = document.createElement("td");
+      var col4 = document.createElement("td");
+      var col5 = document.createElement("td");
+      col1.innerHTML = player.name;
+      col2.innerHTML = player.played;
+      col3.innerHTML = player.won;
+      col4.innerHTML = player.lost;
+      col5.innerHTML = player.points;
+      tableRow.appendChild(col1);
+      tableRow.appendChild(col2);
+      tableRow.appendChild(col3);
+      tableRow.appendChild(col4);
+      tableRow.appendChild(col5);
+      pointsTable.appendChild(tableRow);
+    });
   </script>
 </body>
 
